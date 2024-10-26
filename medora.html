@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medora - Your Trusted Health Companion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* body styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #eef2f7;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Header styling with logo */
+        header {
+            background: linear-gradient(135deg, #28a745, #00b4d8, #4CAF50, #0096c7);
+            text-align: center;
+            color: #fff;
+            padding: 80px 20px;
+            background-size: 300% 300%;
+            animation: gradient 10s ease infinite;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin: 10px 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        /* Logo Placeholder */
+        .logo-placeholder {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #4CAF50;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section Styling */
+        .content {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .content h2 {
+            color: #4CAF50;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        /* Feature Cards */
+        .feature {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            transition: all 0.3s;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-right: 20px;
+            color: #4CAF50;
+        }
+
+        /* Chatbot Info Section */
+        .chat-section {
+            background: #f9fafb;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .chat-section p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Contact Form */
+        form {
+            background: #fff;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+            color: #4CAF50;
+            text-align: left;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        form input:focus, form textarea:focus {
+            border-color: #4CAF50;
+        }
+
+        form input[type="submit"] {
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        form input[type="submit"]:hover {
+            background: #45a049;
+        }
+
+        /* Footer */
+        footer {
+            background: #000000e9;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .feature {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .feature-icon {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with logo -->
+    <header>
+        <div class="logo-placeholder">
+            <img src="Medora_final.png" alt="Medora Logo" style="width: 100px; height: 100px;">
+        </div>
+        <h1>Welcome to Medora</h1>
+        <h2 color="black">Your AI-Powered Healthcare Companion</h2><br>
+        <h4>Medora is more than just a chatbot – it's your trusted companion in navigating healthcare. Ask questions, get guidance, and manage your health with ease.</h4>
+    </header>
+    
+
+    <!-- About and Features Section -->
+    <div class="content">
+        
+        <h2>Features</h2>
+        <div class="feature">
+            <i class="fas fa-pills feature-icon"></i>
+            <div>
+                <h3>Prescription Validation</h3>
+                <p>Ensuring you take the right medications, every time, avoiding risks and side effects.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <i class="fas fa-heartbeat feature-icon"></i>
+            <div>
+                <h3>Chronic Disease Management</h3>
+                <p>Get personalized tips for diabetes, hypertension, and other chronic conditions.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <i class="fas fa-info-circle feature-icon"></i>
+            <div>
+                <h3>Reliable Health Information</h3>
+                <p>Instant access to trustworthy health advice, whenever you need it.</p>
+            </div>
+        </div>
+
+        <!-- Chat Section with Interactive Message -->
+        <div class="chat-section">
+            <h2>Chat with Medora</h2>
+            <p>Got a question about your health? Chat with Medora, your AI-powered assistant, and experience instant, accurate guidance. It's like having a health expert in your pocket, ready to help!</p>
+            <p>Just start the conversation below, and discover reliable answers, friendly advice, and all the support you need on your wellness journey!</p>
+        </div><br>
+        
+        <!-- Embedded Medora Chatbot Section -->
+        <h2>Start Your Conversation</h2>
+        <p>Click bottom right bot to engage with Medora and experience a new level of healthcare support!</p>
+        <script src="https://scholaraid.ai/chatbot/chatbot.js?assistant_id=03160acb-50e6-4810-af63-f0a40f857d14&user_id=15"></script>
+
+        <!-- Contact Form -->
+        <h2>Contact Us</h2>
+        <p>help.tafsirraza@gmail.com</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Medora. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
