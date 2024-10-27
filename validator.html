@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--'Space Grotesk', sans-serif;-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription Text Extraction</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Prescription Text Extraction</h1>
+        <p class="upload-prompt">Please upload your prescription as either an image (JPG, PNG) or a PDF document.</p>
+        
+        <div class="upload-options">
+            <div class="upload-option">
+                <label for="imageInput">Upload Prescription Image (JPG, PNG):</label>
+                <input type="file" id="imageInput" accept="image/*" onchange="validateFile(event)">
+            </div>
+            <div class="upload-option">
+                <label for="pdfInput">Upload Prescription Document (PDF):</label>
+                <input type="file" id="pdfInput" accept=".pdf" onchange="validateFile(event)">
+            </div>
+        </div>
+        
+        <button class="extract-button" onclick="extractTextFromImage()">Extract Text</button>
+        
+        <textarea id="extractedText" placeholder="Extracted text will appear here..." readonly></textarea>
+        
+        <button class="copy-button" onclick="copyText()">Copy Text</button>
+        
+        <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+            <div class="loading-content">
+                <p id="loadingText">Loading...</p>
+                <div class="loader"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js/dist/tesseract.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
