@@ -147,3 +147,24 @@ function copyText() {
         alert('No text to copy. Please extract text first.');
     }
 }
+
+        function copyText() {
+        const textArea = document.getElementById('extractedText');
+        const extractedText = textArea.value;
+        
+        if (extractedText) {
+            // Copy the extracted text to clipboard
+            textArea.select();
+            document.execCommand('copy');
+            alert('Text copied to clipboard!');
+    
+            // Redirect to chatbot with the copied text pre-filled in the input
+            const chatbotUrl = "https://zolodix.com";  // Replace with the actual URL of your chatbot
+            const encodedText = encodeURIComponent(extractedText); // Encode the text for URL compatibility
+    
+            // Construct the chatbot URL with the pre-filled message and redirect
+            window.location.href = `${chatbotUrl}?message=${encodedText}`;
+        } else {
+            alert('No text to copy. Please extract text first.');
+        }
+    }
